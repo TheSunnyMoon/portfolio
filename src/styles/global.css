@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Importation de polices modernes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-cyber-black text-white;
+}
+
+.shadow-text {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+
+  
+/* Classes utilitaires pour améliorer le contraste */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-neon-purple;
+  text-shadow: 0 0 15px rgba(147, 51, 234, 0.5);
+}
+
+.high-contrast-text {
+  @apply text-white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.glass-card {
+  @apply bg-cyber-black/90 backdrop-blur-md border border-accent/20 rounded-xl shadow-lg;
+}
+
+.content-box {
+  @apply bg-cyber-black border border-accent/30 rounded-lg p-6 shadow-md;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-accent text-white font-medium rounded-lg shadow-md hover:bg-accent-light transition duration-300;
+}
+
+/* Animation pour attirer l'attention */
+@keyframes pulse-border {
+  0%, 100% {
+    box-shadow: 0 0 0 1px rgba(147, 51, 234, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(147, 51, 234, 0.5);
+  }
+}
+
+.pulse-border {
+  animation: pulse-border 2s infinite;
+}
+
+/* Customize scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cyber-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent-light;
+}
